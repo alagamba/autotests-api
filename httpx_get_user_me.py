@@ -16,7 +16,7 @@ login_response_data = login_response.json()
 # print("Status code", login_response.status_code)
 
 auth_header = {"Authorization": f"Bearer {login_response_data["token"]["accessToken"]}"}
-
+ 
 get_user_information = httpx.get(get_auth_user_info_url, headers=auth_header)
 
 user_fio_data = get_user_information.json()
