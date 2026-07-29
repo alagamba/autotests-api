@@ -11,6 +11,5 @@ payload = {
     "middleName": "Testovich"
     }
 
-response = httpx.post(create_user_url, json=payload)
-print(response.status_code)
-print(response.json())
+create_user_response = httpx.post(create_user_url, json=payload)
+create_user_response_data = create_user_response.json()
