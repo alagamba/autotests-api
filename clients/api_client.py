@@ -1,6 +1,5 @@
 from httpx import Client, URL, QueryParams, Response
 from typing import Any
-
 from httpx._types import RequestData, RequestFiles
 
 
@@ -12,7 +11,7 @@ class APIClient:
     def __init__(self, client: Client):
         self.client = client
 
-    def get(self, url: URL | str, params: QueryParams | None = None) -> Response:
+    def get(self, url: URL | str, params: dict[str, Any] | None = None) -> Response:
         """
         Выполняет GET-запрос.
 
