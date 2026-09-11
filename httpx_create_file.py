@@ -1,5 +1,5 @@
 import httpx
-from tools.fakers import get_random_email
+from tools.fakers import fake
 
 loaded_data = {
     "filename": "image.png",
@@ -12,7 +12,7 @@ files = {
 base_url = "http://127.0.0.1:8000"
 create_user_url = base_url + "/api/v1/users"
 payload = {
-    "email": get_random_email(),
+    "email": fake.email(),
     "password": "123456",
     "lastName": "Testov",
     "firstName": "Test",
